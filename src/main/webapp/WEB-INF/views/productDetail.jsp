@@ -9,15 +9,22 @@
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-<div id="app">
-{{ message }}
-</div>
-<script type="text/javascript">
-	var app = new Vue({
-	  el: '#app',
-	  data: {
-	    message: '안녕하세요 Vue!!!'
-	  }
+	<div id="name">{{ name }}</div>
+	<div id="price">{{ price }}</div>
+
+<script>
+	var name = new Vue({
+		el: '#name',
+		data: {
+			name: '${productVO.name}'
+		}
+	});
+	
+	var price = new Vue({
+		el: '#price',
+		data: {
+			price: '${productVO.price}'
+		}
 	});
 </script>
 </body>

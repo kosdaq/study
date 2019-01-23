@@ -11,17 +11,17 @@ public class SampleController {
 
 	private static final Logger logger = LoggerFactory.getLogger(SampleController.class);
 	
-	@RequestMapping(value = "doA")
+	@RequestMapping(value = "/doA")
 	public void doA() {
 		logger.info("doA called....................");
 	}
 
-	@RequestMapping(value = "doB")
+	@RequestMapping(value = "/doB")
 	public void doB() {
 		logger.info("doB called....................");
 	}
 	
-	@RequestMapping(value = "doC")
+	@RequestMapping(value = "/doC")
 	public String doC(@ModelAttribute("msg") String msg) {
 		logger.info("doC called....................");
 		
